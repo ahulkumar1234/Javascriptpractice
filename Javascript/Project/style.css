@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("image/bg.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 10px 20px;
+}
+
+.container h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(207, 207, 207);
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: cadetblue;
+    margin-left: 5px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(83, 136, 138)
+}
+
+.delete {
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#delete:hover {
+    background-color: rgb(235, 2, 2)
+}
+
+.listitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
