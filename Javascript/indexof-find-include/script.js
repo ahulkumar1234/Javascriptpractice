@@ -5,18 +5,18 @@ Method	            Kya karta hai (Simple Hindi)	                           Examp
 push()	            Last mein add karta hai	                                  arr.push(5)
 pop()	            Last se hatata hai	                                      arr.pop()
 shift()	            First se hatata hai	                                      arr.shift()
-unshift()            First mein add karta hai	                              arr.unshift(0)
+unshift()           First mein add karta hai	                              arr.unshift(0)
 map()	            Naya array banata hai	                                  arr.map(x => x*2)
-filter()	            Condition ke basis pe data return karta hai	              arr.filter(x => x > 2)
-reduce()	            Sabko mila kar ek value banata hai	                      arr.reduce((a,b) => a+b)
+filter()	        Condition ke basis pe data return karta hai	              arr.filter(x => x > 2)
+reduce()	        Sabko mila kar ek value banata hai	                      arr.reduce((a,b) => a+b)
 find()	            Pehla match return karta hai	                          find(x => x > 5)
-includes()           Check karta hai element present hai ya nahi	              arr.includes(3)
-indexOf()            Position batata hai	                                      arr.indexOf(3)
+includes()          Check karta hai element present hai ya nahi	              arr.includes(3)
+indexOf()           Position batata hai	                                      arr.indexOf(3)
 sort()	            Sort karta hai	                                          arr.sort()
-reverse()            Ulta karta hai	                                          arr.reverse()
-concat()	            2 arrays jodta hai	                                      arr1.concat(arr2)
+reverse()           Ulta karta hai	                                          arr.reverse()
+concat()	        2 arrays jodta hai	                                      arr1.concat(arr2)
 slice()	            Part copy karta hai	                                      arr.slice(1,3)
-splice()	            Add/remove karta hai array ke beech mein	              arr.splice(1, 1)
+splice()	        Add/remove karta hai array ke beech mein	              arr.splice(1, 1)
 
 
 
@@ -272,7 +272,7 @@ console.log(count)  output: { apple: 3, mango: 2, banana: 1 }
 
 Sabhi true chahiye?	         ✅ Haan	                ❌ Nahi, ek bhi chalega
 Return type	                 true / false	             true / false
-Use case	                   All valid?	               Any one valid?
+Use case	                 All valid?	                 Any one valid?
 
 
 ----------------------------Practice Questions --------------------------------
@@ -305,12 +305,12 @@ toUpperCase()	       Sabko capital letters mein convert karta hai
 toLowerCase()	       Sabko small letters mein convert karta hai
 trim()	               Aage-peeche ke space hata deta hai
 includes()	           Check karta hai word/matter string mein hai ya nahi
-startsWith()	           Check karta hai string kis se start ho raha hai
+startsWith()	       Check karta hai string kis se start ho raha hai
 endsWith()	           Check karta hai string kis se end ho raha hai
 indexOf()	           Ek word ka pehla position batata hai
-slice(start,end)	       Part cut karta hai string ka
+slice(start,end)	   Part cut karta hai string ka
 replace()	           Ek word ko doosre se replace karta hai
 split()	               String ko array mein tod deta hai example = "rahul kumar" -> ["rahul","kumar"]
-join()                  wapas word banata
+join()                 wapas word banata
 
 
