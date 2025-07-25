@@ -426,7 +426,7 @@ let car = {
     state : "jharkhand",
   },
 };
-let car2 = JSON.parse(JSON.stringify(car)) //📌It is called Deep clone using JSON.stringify (ye string mai convert kar deta hai)JSON.parse wapas real form main convert kar deta hai, ye nested object ho tabhi use kiya jata hai..,otherwise(spread operator{...car})📌
+let car2 = JSON.parse(JSON.stringify(car)) //📌It is called Deep clone using JSON.stringify (ye string mai convert kar deta hai)JSON.parse wapas real form main convert kar deta hai, ye nested object ho tabhi copy karne ke liye use hota hai..,otherwise(spread operator{...car})📌
 car2.location.city = "ranchi"
 console.log(car2)
 console.log(car)
