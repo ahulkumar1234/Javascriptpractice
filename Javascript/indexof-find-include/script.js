@@ -651,3 +651,118 @@ fetch("https://dog.ceo/api/breeds/image/random")
     console.log("Punchline:", data.punchline);
   });
 
+// ----------------------------Practice Questions --------------------------------
+
+1.) ek async function banao jo 3 second baad console me "Hello, Rahul!" likhe
+
+let fun = async () => {
+  await setTimeout(() => {
+    console.log("Hello Rahul");
+  }, 3000)
+};
+
+fun()
+
+2.) ek function banao jo ek number lega aur 1 second me uska double return kare  async/await ka use karke 5 ka double print karo
+
+async function double() {
+  setTimeout(()=>{
+       console.log(5+5)
+  },1000)
+}
+double ()
+
+3.) Convert .then() to async/await
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+  //converted code
+  async function change() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+    let data = await response.json();
+    console.log(data)
+  }
+ 
+  change ()
+
+4.) is API se random dog image fetch karo  aur image tag me show karo (async/await ka use karke)
+
+let img = document.querySelector("#dogpics");
+let bttn = document.querySelector("button");
+async function dogimg() {
+  try{
+  let response = await fetch("https://dog.ceo/api/breeds/image/random");
+  let data = await response.json();
+  console.log(data.message); 
+  img.src = data.message;
+  bttn.addEventListener("click",dogimg)
+  }catch (error ){
+     console.log("Error aa gaya", error);
+  }   
+}
+
+dogimg();
+
+5.) yeh API se ek joke lao (setup + punchline) HTML me display karo
+
+let head = document.createElement("h2");
+let para = document.createElement("p");
+let btnn = document.createElement("button")
+
+async function joke() {
+  try {
+  let respons = await fetch ("https://official-joke-api.appspot.com/jokes/random");
+  let dataa = await respons.json();
+  console.log(dataa.setup);
+  console.log(dataa.punchline);
+
+  head.textContent= dataa.setup
+  para.textContent = dataa.punchline
+  btnn.addEventListener("click",joke)
+  document.body.appendChild(head)
+  document.body.appendChild(para)
+  document.body.appendChild(btnn).innerText = "Click for random jokes";
+  } catch(Error){
+    console.log("Error hai", Error)
+  }
+}
+
+joke();
+
+
+6.)  Dog API aur Joke API dono ko ek sath fetch karo  aur dono ka data ek hi time me show karo (Promise.all + async/await)
+
+let image = document.createElement("img");
+let heading = document.createElement("h3");
+let paragraph = document.createElement("p");
+let Button = document.createElement("button");
+document.body.appendChild(Button).innerText = "Click"
+
+
+let kutta = async () => {
+  let [dogres,jokeres] = await Promise.all ([
+   fetch ("https://dog.ceo/api/breeds/image/random"),
+   fetch ("https://official-joke-api.appspot.com/jokes/random")
+]);
+
+let [dogdabba , jokedabba ] = await Promise.all ([
+  dogres.json(),
+  jokeres.json()
+])
+
+  image.src = dogdabba.message
+  document.body.appendChild(image)
+
+  
+  heading.textContent = jokedabba.setup
+  paragraph.textContent = jokedabba.punchline
+
+  document.body.appendChild(heading)
+  document.body.appendChild(paragraph)
+
+}
+ Button.addEventListener("click",kutta);
+
+kutta()
