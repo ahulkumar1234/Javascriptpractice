@@ -351,8 +351,8 @@ let data = {
 let newdata = {}  blank object banaya
 
 for (const key in data) {
-    if(typeof data[key] === "string"){  condition check : agar data{} mai string items hai to
-        newdata[key]=data[key]          data ke string items ko newdata{} mai daal do
+    if(typeof data[key] === "string"){  //condition check : agar data{} mai string items hai to
+        newdata[key]=data[key]          //data ke string items ko newdata{} mai daal do
     }
 }
 console.log(newdata) // print karwa diya
@@ -428,7 +428,7 @@ let car = {
     state : "jharkhand",
   },
 };
-let car2 = JSON.parse(JSON.stringify(car)) 📌It is called Deep clone using JSON.stringify (ye string mai convert kar deta hai)JSON.parse wapas real form main convert kar deta hai, ye nested object ho tabhi use kiya jata hai..,otherwise(spread operator{...car})📌
+let car2 = JSON.parse(JSON.stringify(car)) //📌It is called Deep clone using JSON.stringify (ye string mai convert kar deta hai)JSON.parse wapas real form main convert kar deta hai, ye nested object ho tabhi use kiya jata hai..,otherwise(spread operator{...car})📌
 car2.location.city = "ranchi"
 console.log(car2)
 console.log(car)
@@ -807,7 +807,7 @@ function abcd(){
         }
     }
 }
-let fnc = abcd(); 👉  clousers print karne ke liye usko phle ek variable mai save karna padta hai
+let fnc = abcd(); 👉 // clousers print karne ke liye usko phle ek variable mai save karna padta hai
 fnc();
 
 
@@ -839,3 +839,4 @@ class car {
 
 let car1 = new car("nano","Tata","1 Lakh")
 console.log(car1)
+
