@@ -1,5 +1,6 @@
 ✅ Most Used Array Methods
 
+
 Method	            Kya karta hai (Simple Hindi)	                           Example
 
 push()	            Last mein add karta hai	                                  arr.push(5)
@@ -286,7 +287,7 @@ return num > 100
 console.log(result) output: false
 
 
-2.) // Check if any number is > 35
+2.) Check if any number is > 35
 
 let nums = [10, 20, 30, 40];
 
@@ -295,7 +296,7 @@ return num > 35
 });
 console.log(res);  output: true
 
-
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 JavaScript String Methods (Most Important)
 Method	               Kya karta hai?
 
@@ -309,10 +310,11 @@ endsWith()	           Check karta hai string kis se end ho raha hai
 indexOf()	           Ek word ka pehla position batata hai
 slice(start,end)	       Part cut karta hai string ka
 replace()	           Ek word ko doosre se replace karta hai
-split()	               String ko array mein tod deta hai example = "rahul kumar" -> ["rahul","kumar"]
-join()                  wapas word banata
+split()	               String ko array mein tod deta hai example = "rahul kumar" -> ["rahul","kumar"] and rahul.split("")=['r','a','h','u','l']
+join()                  wapas word banata  rahul.join("")=["rahul"]
 
-
+let names = "rahul"
+console.log(names.split("").join(""));
 
 ✅ What is an Object in JavaScript?
 Object ek aisi cheez hoti hai jisme key-value pairs hote hain.
@@ -346,11 +348,11 @@ let data = {
   isStudent: true
 };
 
-let newdata = {}  //blank object banaya
+let newdata = {}  blank object banaya
 
 for (const key in data) {
-    if(typeof data[key] === "string"){  //condition check : agar data{} mai string items hai to
-        newdata[key]=data[key]          // data ke string items ko newdata{} mai daal do
+    if(typeof data[key] === "string"){  condition check : agar data{} mai string items hai to
+        newdata[key]=data[key]          data ke string items ko newdata{} mai daal do
     }
 }
 console.log(newdata) // print karwa diya
@@ -426,7 +428,7 @@ let car = {
     state : "jharkhand",
   },
 };
-let car2 = JSON.parse(JSON.stringify(car)) //📌It is called Deep clone using JSON.stringify (ye string mai convert kar deta hai)JSON.parse wapas real form main convert kar deta hai, ye nested object ho tabhi use kiya jata hai..,otherwise(spread operator{...car})📌
+let car2 = JSON.parse(JSON.stringify(car)) 📌It is called Deep clone using JSON.stringify (ye string mai convert kar deta hai)JSON.parse wapas real form main convert kar deta hai, ye nested object ho tabhi use kiya jata hai..,otherwise(spread operator{...car})📌
 car2.location.city = "ranchi"
 console.log(car2)
 console.log(car)
@@ -503,7 +505,7 @@ person.greet(); // Output: Hello, my name is Rahul
 
 🔍Explanation:
 📌 greet ek method hai (kyunki ye object ke andar function hai)
-📌 this.name ka matlab hai: object ke andar jo name key hai uski value
+📌 this.name ka matlab hai: object ke andar jo (name) key hai uski value
 📌 this = current object (yani person)
 
 ----------------------------Practice Questions --------------------------------
@@ -552,6 +554,7 @@ JSON Rules 🔴	Description
 
 ✅ Why JSON is Useful?
            Use	                                 Example
+
 📡 Data share via API	                  From backend to frontend
 💾 Store data	                            In files like .json
 🌐 Used in almost every web app	          Zomato, Amazon, etc.
@@ -565,33 +568,34 @@ Ye dono JavaScript me Promises ko asaani se handle karne ke liye aate hain.
 🔁 Pehle hum .then() laga ke chain banate the — ab uske jagah async/await se code clean aur readable ho jata hai.
 
 💡 1-Line Explanation:
-async ➡ function ko promise-returning banata hai
-await ➡ kisi bhi promise ka result ka wait karta hai (line-by-line execution hota hai), Promise ka result aane tak rukega
+📌async ➡ function ko promise-returning banata hai
+📌await ➡ kisi bhi promise ka result ka wait karta hai (line-by-line execution hota hai), Promise ka result aane tak rukega
 ⚠️ await sirf async function ke andar chalega
 
 📌async - Function ke aage lagate hain — iska matlab: “andar await chalayega”
 📌await - Sirf us cheez pe lagta hai jo Promise return karti hai — jiske aane me time lagta hai (async kaam)
-Examples:
-let res = await fetch("https://api.example.com");  // ✅ fetch ek Promise return karta hai
-let data = await res.json();  // ✅ res.json() bhi Promise return karta hai
+Examples:👇
+
+let res = await fetch("https://api.example.com");  📌 // fetch ek Promise return karta hai
+let data = await res.json();  // res.json() bhi Promise return karta hai
 
 async function getData() {
+
   let promise = new Promise((resolve, reject) => {
     setTimeout(() => resolve("Data mil gaya ✅"), 2000);
   });
-
   let result = await promise; // Jab tak promise resolve nahi hota, yahan ruk jaayega
-  console.log(result);        // Output: Data mil gaya ✅
+  console.log(result);        // Output: Data mil gaya 
 }
 getData();
 
 ⚠️ await sirf async function ke andar chalega
-Examples:
+Examples:👇
 
 ❌ Error dega:
 let res = await fetch("https://api.example.com");
 
-// ✅ Sahi tarika:
+ ✅ Sahi tarika:
 async function fetchData() {
   let res = await fetch("https://api.example.com");
   console.log(res);
@@ -603,6 +607,7 @@ async function getData() {
   console.log(data.message)
 }
 getData();
+
 
 ✅🔴 Fetch API – Kya hota hai?
 👉 Jab hum kisi server (ya API) se data chahte hain (jaise weather info, user list, etc.), toh hum fetch() ka use karte hain.
@@ -644,14 +649,15 @@ fetch("https://dog.ceo/api/breeds/image/random")
 
 <--------------------------------------------------------->
 
-  fetch("https://official-joke-api.appspot.com/jokes/random")
-  .then(response => response.json())
-  .then(data => {
-    console.log("Setup:", data.setup);
-    console.log("Punchline:", data.punchline);
-  });
+fetch("https://official-joke-api.appspot.com/jokes/random")
+.then(response => response.json())
+.then(data => {
+  console.log("Setup:", data.setup);
+  console.log("Punchline:", data.punchline);
+});
 
-// ----------------------------Practice Questions --------------------------------
+
+----------------------------Practice Questions --------------------------------
 
 1.) ek async function banao jo 3 second baad console me "Hello, Rahul!" likhe
 
@@ -663,7 +669,7 @@ let fun = async () => {
 
 fun()
 
-2.) ek function banao jo ek number lega aur 1 second me uska double return kare  async/await ka use karke 5 ka double print karo
+2.) ek function banao jo ek number lega aur 1 second me uska double return kare async/await ka use karke 5 ka double print karo
 
 async function double() {
   setTimeout(()=>{
@@ -684,10 +690,9 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
     let data = await response.json();
     console.log(data)
   }
- 
   change ()
 
-4.) is API se random dog image fetch karo  aur image tag me show karo (async/await ka use karke)
+4.) is API se random dog image fetch karo aur image tag me show karo (async/await ka use karke)
 
 let img = document.querySelector("#dogpics");
 let bttn = document.querySelector("button");
@@ -732,7 +737,7 @@ async function joke() {
 joke();
 
 
-6.)  Dog API aur Joke API dono ko ek sath fetch karo  aur dono ka data ek hi time me show karo (Promise.all + async/await)
+6.)  Dog API aur Joke API dono ko ek sath fetch karo aur dono ka data ek hi time me show karo (Promise.all + async/await)
 
 let image = document.createElement("img");
 let heading = document.createElement("h3");
@@ -763,6 +768,74 @@ let [dogdabba , jokedabba ] = await Promise.all ([
   document.body.appendChild(paragraph)
 
 }
- Button.addEventListener("click",kutta);
-
+ Button.addEventListener("click",kutta)
 kutta()
+
+
+
+
+✅ scope kya hota hai?
+ek variable ko kaha tak acces (use) kar sakte hai
+Types :-
+functional scope - function ke andar hi use hoga
+global scope - pure code mai kahi bhi use ho sakta hai
+block scope - {} curly braces mai hi use ho sakta hai
+
+
+✅ Execution context kya hai?
+Jab JavaScript kisi code ko run (execute) karta hai, toh wo ek environment banata hai jisme code ka pura process chalta hai. Is environment ko hi Execution Context kehte hain.
+
+🔄 2 Phases in Execution Context:
+
+| Phase                        | Kaam                                                            |
+| ---------------------------- | --------------------------------------------------------------- |
+| 1. **Memory Creation Phase** | Variables/functions ko memory milti hai (undefined ya hoisting) |
+| 2. **Code Execution Phase**  | Actual values assign hoti hain aur code run hota hai            |
+
+
+✅ clousers - ek funtion hota hai jo kisi parent function ke andar hota hai or parent function usko return kar raha ho or wo parent functionn ka variable use kar raha ho
+Example code of clousers :
+function abcd(){
+    let a = 0;
+    return function(){
+        if( a < 5 ){
+            console.log(a)
+            a++
+        }
+        else{
+            console.error("limit khatam")
+        }
+    }
+}
+let fnc = abcd(); 👉  clousers print karne ke liye usko phle ek variable mai save karna padta hai
+fnc();
+
+
+----------------------------------------OOPS in Javascript----------------------------------------
+
+
+function Car (brand, price, color,model){
+    this.brand = brand
+    this.price = price
+    this.model = model
+    this.color = color
+}
+
+let Car1 = new Car ("toyota","1 lakh","Fortuner","white");
+let Car2 = new Car ("Tata","1 lakh","Harrier","black");
+
+console.log(Car1)
+console.log(Car2)
+
+class is blueprint to create something 
+Example = Bank ( diffent account holders but same bank )
+class car {
+    constructor (name,brand,price){ 
+        this.name= name
+        this.brand=brand
+        this.price=price
+    }
+}
+
+let car1 = new car("nano","Tata","1 Lakh")
+console.log(car1)
