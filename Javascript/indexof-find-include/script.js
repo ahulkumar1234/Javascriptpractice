@@ -287,7 +287,7 @@ return num > 100
 console.log(result) output: false
 
 
-2.) Check if any number is > 35
+2.) // Check if any number is > 35
 
 let nums = [10, 20, 30, 40];
 
@@ -348,11 +348,11 @@ let data = {
   isStudent: true
 };
 
-let newdata = {}  blank object banaya
+let newdata = {}  //blank object banaya
 
 for (const key in data) {
     if(typeof data[key] === "string"){  //condition check : agar data{} mai string items hai to
-        newdata[key]=data[key]          //data ke string items ko newdata{} mai daal do
+        newdata[key]=data[key]          // data ke string items ko newdata{} mai daal do
     }
 }
 console.log(newdata) // print karwa diya
@@ -595,7 +595,7 @@ Examples:👇
 ❌ Error dega:
 let res = await fetch("https://api.example.com");
 
- ✅ Sahi tarika:
+// ✅ Sahi tarika:
 async function fetchData() {
   let res = await fetch("https://api.example.com");
   console.log(res);
@@ -669,7 +669,7 @@ let fun = async () => {
 
 fun()
 
-2.) ek function banao jo ek number lega aur 1 second me uska double return kare async/await ka use karke 5 ka double print karo
+2.) ek function banao jo ek number lega aur 1 second me uska double return kare // async/await ka use karke 5 ka double print karo
 
 async function double() {
   setTimeout(()=>{
@@ -692,7 +692,7 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
   }
   change ()
 
-4.) is API se random dog image fetch karo aur image tag me show karo (async/await ka use karke)
+4.) is API se random dog image fetch karo // aur image tag me show karo (async/await ka use karke)
 
 let img = document.querySelector("#dogpics");
 let bttn = document.querySelector("button");
@@ -737,7 +737,7 @@ async function joke() {
 joke();
 
 
-6.)  Dog API aur Joke API dono ko ek sath fetch karo aur dono ka data ek hi time me show karo (Promise.all + async/await)
+6.) // Dog API aur Joke API dono ko ek sath fetch karo // aur dono ka data ek hi time me show karo (Promise.all + async/await)
 
 let image = document.createElement("img");
 let heading = document.createElement("h3");
@@ -838,5 +838,109 @@ class car {
 }
 
 let car1 = new car("nano","Tata","1 Lakh")
-console.log(car1)
+console.log(car1);
 
+
+
+🔥 JavaScript Execution Model
+
+JavaScript ka execution model samajhna bahut zaroori hai, kyunki isse humein pata chalta hai ki code kaise run hota hai aur asynchronous tasks kaise handle hote hain.
+✅ 1.) JavaScript Single Threaded hai
+👉 Matlab ek hi time pe ek kaam (call stack) chal sakta hai.
+👉 Agar long task chal gaya to baaki ruk jaayega.
+
+✅ 2.) Tasks ke 2 Queue hote hain:
+🔄 1. Macrotask Queue
+Ye bade tasks ke liye hota hai (delayed work).
+Example: setTimeout, setInterval, setImmediate, DOM events, I/O.
+Macrotask queue me tasks ko store kiya jaata hai, jab call stack khali hota hai tab ye tasks run hote hain.
+Macrotask queue se ek task uthaya jaata hai aur call stack me daala jaata hai.
+
+🔄 2. Microtask Queue
+Ye chhote aur priority high wale tasks ke liye hota hai.
+Example: Promise.then, async/await continuation, queueMicrotask.
+Microtask queue me tasks ko store kiya jaata hai, ye hamesha call stack ke baad run hote hain.
+
+👉 Microtask queue se sabse pehle tasks uthaye jaate hain, phir macrotask queue se.
+👉 Agar microtask queue me kuch tasks hain, to call stack khali hone ke baad unhe run kiya jaata hai.
+👉 Agar microtask queue empty ho gayi, tab macrotask queue se ek task uthaya jaata hai.
+
+✅ 3.) Event Loop ka Rule
+👉 Call stack (synchronous code) sabse pehle execute hota hai.
+👉 Fir microtask queue check hoti hai → agar kuch hai to wo sabse pehle run hota hai.
+👉 Agar microtask empty ho gayi to fir macrotask queue se ek task uthaya jaata hai.
+👉 Repeat repeat repeat…
+
+
+🔥 Example 1: Microtask vs Macrotask
+
+console.log("Start");
+
+setTimeout(() => console.log("Macrotask - setTimeout"), 0);
+
+Promise.resolve().then(() => console.log("Microtask - Promise.then"));
+
+console.log("End");
+
+
+👉 Output:                             
+Start
+End
+Microtask - Promise.then
+Macrotask - setTimeout
+
+👉 Reason:
+
+Synchronous code → "Start", "End"
+Microtask (Promise.then) → "Microtask - Promise.then"
+Macrotask (setTimeout) → "Macrotask - setTimeout"
+👉 Iska matlab hai ki microtasks hamesha pehle execute hote hain, phir macrotasks.
+
+🔥 Example 2: Multiple Promises
+
+console.log("Start");
+
+Promise.resolve().then(() => {
+    console.log("Microtask 1");
+});
+
+Promise.resolve().then(() => {
+    console.log("Microtask 2");
+});
+
+console.log("End");
+
+👉 Output: 
+Start
+End
+Microtask 1
+Microtask 2
+
+👉 Reason: Microtasks hamesha order of creation me execute hote hain.
+
+
+🔥 Example 3: Mixed
+
+console.log("A");
+
+setTimeout(() => console.log("B"), 0);
+
+Promise.resolve().then(() => console.log("C"));
+
+console.log("D");
+
+👉 Output:
+A
+D
+C
+B
+
+👉 Reason:
+Synchronous code → "A", "D"
+Microtask (Promise.then) → "C"
+Macrotask (setTimeout) → "B" 
+👉( Ye interview ka favorite hai 😅)
+
+👉 Ek Line Me Yaad Rakho:
+Synchronous > Microtask > Macrotask
+Har tick (iteration) me pehle microtask khatam karni hai, tabhi macrotask start hogi.
