@@ -1,12 +1,12 @@
-🚀 JavaScript Cheat Sheet + Practice Guide
+# 🚀 JavaScript Cheat Sheet + Practice Guide
 
-A complete collection of most used JavaScript concepts – Arrays, Strings, Objects, Async/Await, Event Loop, OOPs and more – with easy Hindi + English explanations and code.
+## A complete collection of most used JavaScript concepts – Arrays, Strings, Objects, Async/Await, Event Loop, OOPs and more – with easy Hindi + English explanations and code.
 
 
 ---
 
-📌 Array Methods
-
+# 📌 Array Methods
+```
 let numbers = [5, 10, 15, 20, 25];
 
 numbers.push(30);   // [5, 10, 15, 20, 25, 30]
@@ -30,13 +30,13 @@ reverse()	Ulta kar deta hai	arr.reverse()
 concat()	2 arrays ko jodta hai	arr1.concat(arr2)
 slice()	Part copy karta hai (non-destructive)	arr.slice(1,3)
 splice()	Add/remove karta hai array ke beech me	arr.splice(1,1)
-
+```
 
 
 ---
 
-📌 String Methods
-
+# 📌 String Methods
+```
 let str = "  Hello Rahul  ";
 console.log(str.trim().toUpperCase()); // "HELLO RAHUL"
 
@@ -55,12 +55,12 @@ replace()	Replace karta hai
 split()	String ko array banata hai
 join()	Array ko string banata hai
 
-
+```
 
 ---
 
-📌 Objects in JavaScript
-
+# 📌 Objects in JavaScript
+```
 let student = {
   name: "Rahul",
   age: 22,
@@ -79,11 +79,11 @@ let car = {
 };
 console.log(car.location.city); // Jamshedpur
 
-
+```
 ---
 
-📌 Array of Objects
-
+# 📌 Array of Objects
+```
 let employees = [
   { name: "Ravi", salary: 25000 },
   { name: "Anu", salary: 30000 },
@@ -93,11 +93,11 @@ let employees = [
 let maxSalary = employees.reduce((max, emp) => emp.salary > max ? emp.salary : max, 0);
 console.log(maxSalary); // 30000
 
-
+```
 ---
 
-📌 Methods in Objects
-
+# 📌 Methods in Objects
+```
 let person = {
   name: "Rahul",
   greet() {
@@ -105,12 +105,12 @@ let person = {
   }
 };
 person.greet();
-
+```
 
 ---
 
-📌 JSON
-
+# 📌 JSON
+```json
 {
   "name": "Rahul",
   "age": 22,
@@ -125,11 +125,11 @@ let obj = JSON.parse('{"name":"Rahul"}');
 
 let str = JSON.stringify({name: "Rahul"});
 
-
+```
 ---
 
-📌 Async / Await & Fetch API
-
+# 📌 Async / Await & Fetch API
+```
 async function getData() {
   let response = await fetch("https://dog.ceo/api/breeds/image/random");
   let data = await response.json();
@@ -139,11 +139,11 @@ getData();
 
 👉 await = wait for Promise result 👉 async = allows use of await inside function
 
-
+```
 ---
 
-📌 Event Loop (Microtask vs Macrotask)
-
+# 📌 Event Loop (Microtask vs Macrotask)
+```
 console.log("Start");
 
 setTimeout(() => console.log("Macrotask"), 0);
@@ -161,11 +161,11 @@ Macrotask
 
 👉 Order: Synchronous > Microtask > Macrotask
 
-
+```
 ---
 
-📌 OOPs in JavaScript
-
+# 📌 OOPs in JavaScript
+```
 Constructor Function
 
 function Car(brand, model) {
@@ -187,12 +187,12 @@ class Car {
 
 let car1 = new Car("Nano", "Tata", "1 Lakh");
 console.log(car1);
-
+```
 
 ---
 
-📌 Closures
-
+# 📌 Closures
+```
 function counter() {
   let count = 0;
   return function () {
@@ -204,12 +204,12 @@ function counter() {
 let fn = counter();
 fn(); // 0
 fn(); // 1
-
+```
 
 ---
 
-📝 Final Notes
-
+# 📝 Final Notes
+```
 Practice with all array methods
 
 Master objects & array of objects
@@ -220,9 +220,9 @@ Use async/await for clean code
 
 Learn OOPs (classes & constructors) for structure
 
-
+```
 
 ---
 
-🔥 This repo can be your all-in-one JS reference + practice guide.
+# 🔥 This repo can be your all-in-one JS reference + practice guide.
 
