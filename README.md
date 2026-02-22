@@ -67,7 +67,7 @@ let student = {
   age: 22,
   city: "Delhi"
 };
-```console.log(student.name); // Rahul```
+console.log(student.name); // Rahul
 
 Nested Objects
 
@@ -78,7 +78,7 @@ let car = {
     state: "Jharkhand"
   }
 };
-```console.log(car.location.city); // Jamshedpur```
+console.log(car.location.city); // Jamshedpur
 
 ```
 ---
