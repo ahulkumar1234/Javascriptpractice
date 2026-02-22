@@ -212,18 +212,12 @@ fn(); // 1
 ---
 
 # 📝 Final Notes
-```
-Practice with all array methods
 
-Master objects & array of objects
-
-Understand event loop order
-
-Use async/await for clean code
-
-Learn OOPs (classes & constructors) for structure
-
-```
+- Practice with all array methods
+- Master objects & array of objects
+- Understand event loop order
+- Use async/await for clean code
+- Learn OOPs (classes & constructors) for structure
 
 ---
 
