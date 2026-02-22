@@ -61,7 +61,7 @@ Method	Kya karta hai?
 ---
 
 # 📌 Objects in JavaScript
-```json
+```js
 let student = {
   name: "Rahul",
   age: 22,
