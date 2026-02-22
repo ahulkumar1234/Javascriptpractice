@@ -84,7 +84,7 @@ console.log(car.location.city); // Jamshedpur
 ---
 
 # 📌 Array of Objects
-```
+```js
 let employees = [
   { name: "Ravi", salary: 25000 },
   { name: "Anu", salary: 30000 },
@@ -95,6 +95,7 @@ let maxSalary = employees.reduce((max, emp) => emp.salary > max ? emp.salary : m
 console.log(maxSalary); // 30000
 
 ```
+
 ---
 
 # 📌 Methods in Objects
