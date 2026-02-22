@@ -99,7 +99,7 @@ console.log(maxSalary); // 30000
 ---
 
 # 📌 Methods in Objects
-```
+```js
 let person = {
   name: "Rahul",
   greet() {
@@ -118,20 +118,21 @@ person.greet();
   "age": 22,
   "skills": ["HTML", "CSS", "JavaScript"]
 }
+```
 
 ✅ Convert JSON → JS Object:
 
-let obj = JSON.parse('{"name":"Rahul"}');
+```let obj = JSON.parse('{"name":"Rahul"}');```
 
 ✅ Convert JS Object → JSON:
 
-let str = JSON.stringify({name: "Rahul"});
+```let str = JSON.stringify({name: "Rahul"});```
 
 ```
 ---
 
 # 📌 Async / Await & Fetch API
-```
+```js
 async function getData() {
   let response = await fetch("https://dog.ceo/api/breeds/image/random");
   let data = await response.json();
@@ -145,7 +146,7 @@ getData();
 ---
 
 # 📌 Event Loop (Microtask vs Macrotask)
-```
+```js
 console.log("Start");
 
 setTimeout(() => console.log("Macrotask"), 0);
@@ -156,10 +157,10 @@ console.log("End");
 
 ✅ Output:
 
-Start
-End
-Microtask
-Macrotask
+- Start
+- End
+- Microtask
+- Macrotask
 
 👉 Order: Synchronous > Microtask > Macrotask
 
@@ -167,7 +168,7 @@ Macrotask
 ---
 
 # 📌 OOPs in JavaScript
-```
+```js
 Constructor Function
 
 function Car(brand, model) {
@@ -194,7 +195,7 @@ console.log(car1);
 ---
 
 # 📌 Closures
-```
+```js
 function counter() {
   let count = 0;
   return function () {
