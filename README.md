@@ -9,9 +9,9 @@
 
 let numbers = [5, 10, 15, 20, 25];
 
-numbers.push(30);   // [5, 10, 15, 20, 25, 30]
-numbers.pop();      // [5, 10, 15, 20, 25]
-console.log(numbers.includes(10)); // true
+```numbers.push(30);   // [5, 10, 15, 20, 25, 30]```
+```numbers.pop();      // [5, 10, 15, 20, 25]```
+```console.log(numbers.includes(10)); // true```
 
 Method	Kya karta hai (Simple Hindi)	Example Code
 
