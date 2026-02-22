@@ -128,7 +128,7 @@ person.greet();
 
 ```let str = JSON.stringify({name: "Rahul"});```
 
-```
+
 ---
 
 # 📌 Async / Await & Fetch API
