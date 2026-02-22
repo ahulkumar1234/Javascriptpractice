@@ -1,6 +1,6 @@
 # 🚀 JavaScript Cheat Sheet + Practice Guide
 
-## A complete collection of most used JavaScript concepts – Arrays, Strings, Objects, Async/Await, Event Loop, OOPs and more – with easy Hindi + English explanations and code.
+### A complete collection of most used JavaScript concepts – Arrays, Strings, Objects, Async/Await, Event Loop, OOPs and more – with easy Hindi + English explanations and code.
 
 
 ---
@@ -15,7 +15,7 @@ console.log(numbers.includes(10)); // true
 
 Method	Kya karta hai (Simple Hindi)	Example Code
 
-push()	Last me add karta hai	arr.push(5)
+- push()	Last me add karta hai	arr.push(5)
 pop()	Last se hatata hai	arr.pop()
 shift()	First se hatata hai	arr.shift()
 unshift()	First me add karta hai	arr.unshift(0)
