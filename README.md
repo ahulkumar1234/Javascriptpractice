@@ -6,7 +6,7 @@
 ---
 
 # 📌 Array Methods
-```
+
 let numbers = [5, 10, 15, 20, 25];
 
 numbers.push(30);   // [5, 10, 15, 20, 25, 30]
@@ -16,21 +16,21 @@ console.log(numbers.includes(10)); // true
 Method	Kya karta hai (Simple Hindi)	Example Code
 
 - push()	Last me add karta hai	arr.push(5)
-pop()	Last se hatata hai	arr.pop()
-shift()	First se hatata hai	arr.shift()
-unshift()	First me add karta hai	arr.unshift(0)
-map()	Har element par operation, new array return	arr.map(x => x*2)
-filter()	Condition ke basis par naya array banata hai	arr.filter(x => x>2)
-reduce()	Sabko mila kar ek value banata hai	arr.reduce((a,b)=>a+b)
-find()	Pehla matching value deta hai	arr.find(x=>x>5)
-includes()	Check karta hai element present hai ya nahi	arr.includes(3)
-indexOf()	Position batata hai (not found = -1)	arr.indexOf(3)
-sort()	Elements ko sort karta hai	arr.sort()
-reverse()	Ulta kar deta hai	arr.reverse()
-concat()	2 arrays ko jodta hai	arr1.concat(arr2)
-slice()	Part copy karta hai (non-destructive)	arr.slice(1,3)
-splice()	Add/remove karta hai array ke beech me	arr.splice(1,1)
-```
+- pop()	Last se hatata hai	arr.pop()
+- shift()	First se hatata hai	arr.shift()
+- unshift()	First me add karta hai	arr.unshift(0)
+- map()	Har element par operation, new array return	arr.map(x => x*2)
+- filter()	Condition ke basis par naya array banata hai	arr.filter(x => x>2)
+- reduce()	Sabko mila kar ek value banata hai	arr.reduce((a,b)=>a+b)
+- find()	Pehla matching value deta hai	arr.find(x=>x>5)
+- includes()	Check karta hai element present hai ya nahi	arr.includes(3)
+- indexOf()	Position batata hai (not found = -1)	arr.indexOf(3)
+- sort()	Elements ko sort karta hai	arr.sort()
+- reverse()	Ulta kar deta hai	arr.reverse()
+- concat()	2 arrays ko jodta hai	arr1.concat(arr2)
+- slice()	Part copy karta hai (non-destructive)	arr.slice(1,3)
+- splice()	Add/remove karta hai array ke beech me	arr.splice(1,1)
+
 
 
 ---
