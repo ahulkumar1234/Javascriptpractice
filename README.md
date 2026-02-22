@@ -7,7 +7,7 @@
 
 # 📌 Array Methods
 
-let numbers = [5, 10, 15, 20, 25];
+## let numbers = [5, 10, 15, 20, 25];
 
 ```numbers.push(30);   // [5, 10, 15, 20, 25, 30]```
 
@@ -38,37 +38,36 @@ Method	Kya karta hai (Simple Hindi)	Example Code
 ---
 
 # 📌 String Methods
-```
-let str = "  Hello Rahul  ";
-console.log(str.trim().toUpperCase()); // "HELLO RAHUL"
+
+## let str = "  Hello Rahul  ";
+```console.log(str.trim().toUpperCase()); // "HELLO RAHUL"```
 
 Method	Kya karta hai?
 
-length	String ki length deta hai
-toUpperCase()	Capital letters me convert
-toLowerCase()	Small letters me convert
-trim()	Extra spaces hata deta hai
-includes()	Word hai ya nahi check karta hai
-startsWith()	Check karta hai kis se start hota hai
-endsWith()	Check karta hai kis se end hota hai
-indexOf()	Word ka index deta hai
-slice()	Part cut karta hai
-replace()	Replace karta hai
-split()	String ko array banata hai
-join()	Array ko string banata hai
+- length	String ki length deta hai
+- toUpperCase()	Capital letters me convert
+- toLowerCase()	Small letters me convert
+- trim()	Extra spaces hata deta hai
+- includes()	Word hai ya nahi check karta hai
+- startsWith()	Check karta hai kis se start hota hai
+- endsWith()	Check karta hai kis se end hota hai
+- indexOf()	Word ka index deta hai
+- slice()	Part cut karta hai
+- replace()	Replace karta hai
+- split()	String ko array banata hai
+- join()	Array ko string banata hai
 
-```
 
 ---
 
 # 📌 Objects in JavaScript
-```
+```json
 let student = {
   name: "Rahul",
   age: 22,
   city: "Delhi"
 };
-console.log(student.name); // Rahul
+```console.log(student.name); // Rahul```
 
 Nested Objects
 
@@ -79,7 +78,7 @@ let car = {
     state: "Jharkhand"
   }
 };
-console.log(car.location.city); // Jamshedpur
+```console.log(car.location.city); // Jamshedpur```
 
 ```
 ---
